@@ -213,9 +213,13 @@ class Calculation {
             }
 
             state = 5
+            //damos excepcion si nos pasamos de tamaño con enteros o si tenemos
+            //decimales y nos ha pasado un E, significa que ha dado un resultado elevado
             if((resolution.length>9 && !resolution.contains("."))||resolution.contains("E"))
                 throw Exception()
 
+            //formateamos la respuesta si tenemos mas de tres decimales, para prevenir fallos del
+            //idioma, que inventa decimales
             if (resolution.contains(".") && resolution.split(".")[1].length>=3) {
                 resolution = resolution.split(".").first()+"."+resolution.split(".")[1].substring(0..2)
             }
