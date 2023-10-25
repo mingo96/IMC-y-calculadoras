@@ -1,21 +1,39 @@
 package com.example.IMCycalculadoras
 
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.IMCycalculadoras.ui.theme.IMCYCalculadorasTheme
-
-class MainActivity : ComponentActivity() {
+import android.view.View
+import android.widget.Button
+import com.example.IMCycalculadoras.R
+import com.example.IMCycalculadoras.calculadoraEloy.CalculadoraEloy
+import com.example.IMCycalculadoras.calculadoraIMC.CalculadoraIMC
+import com.example.IMCycalculadoras.calculadoraJavi.CalculadoraJavi
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        setContentView(R.layout.xml_javi)
+        initButtons()
+    }
 
+    fun initButtons() {
+        findViewById<Button>(R.id.button_activityIMC).setOnClickListener {
+            startActivity(Intent(this, CalculadoraIMC::class.java))
+        }
+        findViewById<Button>(R.id.button_activityEloy).setOnClickListener{
+            startActivity(Intent(this,CalculadoraEloy::class.java))
+        }
+       /* findViewById<Button>(R.id.button_activityJosema).setOnClickListener{
+            startActivity(Intent(this,CalculadoraJosema::class.java))
+        }
+        */
+        findViewById<Button>(R.id.button_activityJavi).setOnClickListener{
+            startActivity(Intent(this,CalculadoraJavi::class.java))
+        }
+    }
+
+
+    override fun onClick(v: View?) {
+        TODO("Not yet implemented")
     }
 }

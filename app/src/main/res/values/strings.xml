@@ -19,4 +19,8 @@
     <string name="times">*</string>
     <string name="erase"><![CDATA[<]]></string>
     <string name="dot">.</string>
+    <string name="CalculadoraEloy">Calculadora de Eloy</string>
+    <string name="CalculadoraJosema">Calculadora de Josema</string>
+    <string name="CalculadoraJavi">Calculadora de Javi</string>
+    <string name="calcIMC">calculadora de IMC\n</string>
 </resources>
