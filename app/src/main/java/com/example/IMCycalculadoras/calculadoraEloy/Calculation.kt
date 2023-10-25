@@ -213,8 +213,11 @@ class Calculation {
             }
 
             state = 5
-            if (resolution.length>9 && resolution.split(".")[1].length>=3) {
-                resolution = resolution.split(".")[0]+"."+resolution.split(".")[1].substring(0..2)
+            if((resolution.length>9 && !resolution.contains("."))||resolution.contains("E"))
+                throw Exception()
+
+            if (resolution.contains(".") && resolution.split(".")[1].length>=3) {
+                resolution = resolution.split(".").first()+"."+resolution.split(".")[1].substring(0..2)
             }
 
         }catch (e:Exception){
@@ -226,25 +229,32 @@ class Calculation {
     /**
      * funciones de calculo, bastante descriptivas, pasan [num1] y [num2] a Int para hacer cuentas
      * con ellas y asignar el resultado a [resolution]
-     * *arreglo de ultima hora* al poner mas de cierta cantidad de numeros daba error porque
-     * se pasaba a Int, ahora está en long
+     * en todos menos en division, pasamos a double para operar solo si hay algun .
      * */
 
     private fun sum(){
-        resolution = (num1.toDouble() + num2.toDouble()).toString()
+        resolution = if (num1.contains(".")||num2.contains("."))
+            (num1.toDouble() + num2.toDouble()).toString()
+        else
+            (num1.toInt()+num2.toInt()).toString()
     }
 
     private fun substract(){
-        resolution = (num1.toDouble() - num2.toDouble()).toString()
+        resolution = if (num1.contains(".")||num2.contains("."))
+            (num1.toDouble() - num2.toDouble()).toString()
+        else
+            (num1.toInt()-num2.toInt()).toString()
     }
 
     private fun multiply(){
-        resolution = (num1.toDouble() * num2.toDouble()).toString()
-
+        resolution = if (num1.contains(".")||num2.contains("."))
+            (num1.toDouble() * num2.toDouble()).toString()
+        else
+            (num1.toInt()*num2.toInt()).toString()
     }
 
     private fun divide(){
-        resolution = (num1.toDouble() / num2.toDouble()).toString()
+        resolution =(num1.toDouble() / num2.toDouble()).toString()
     }
 
     /**
