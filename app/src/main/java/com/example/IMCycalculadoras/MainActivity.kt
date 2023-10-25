@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         findViewById<Button>(R.id.button_activityEloy).setOnClickListener{
             startActivity(Intent(this,CalculadoraEloy::class.java))
-            setContentView(R.layout.xml_eloy)
         }
        /* findViewById<Button>(R.id.button_activityJosema).setOnClickListener{
             startActivity(Intent(this,CalculadoraJosema::class.java))

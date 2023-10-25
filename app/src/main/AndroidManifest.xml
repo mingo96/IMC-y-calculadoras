@@ -31,7 +31,7 @@
         <activity
             android:name=".calculadoraEloy.CalculadoraEloy"
             android:exported="true"
-            android:theme="@style/Theme.IMCYCalculadoras">
+            android:theme="@style/Theme.AppCompat.Light"            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
