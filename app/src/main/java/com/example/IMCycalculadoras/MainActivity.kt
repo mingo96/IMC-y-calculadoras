@@ -12,7 +12,7 @@ import com.example.IMCycalculadoras.calculadoraJavi.CalculadoraJavi
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.xml_javi)
+        setContentView(R.layout.main_activity)
         initButtons()
     }
 
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         findViewById<Button>(R.id.button_activityEloy).setOnClickListener{
             startActivity(Intent(this,CalculadoraEloy::class.java))
+            setContentView(R.layout.xml_eloy)
         }
        /* findViewById<Button>(R.id.button_activityJosema).setOnClickListener{
             startActivity(Intent(this,CalculadoraJosema::class.java))
