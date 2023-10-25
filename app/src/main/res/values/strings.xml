@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">IMC y calculadoras</string>
+    <string name="screen_text">start</string>
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="calculate">=</string>
+    <string name="clear">CE</string>
+    <string name="divide">/</string>
+    <string name="minus">-</string>
+    <string name="sum">+</string>
+    <string name="times">*</string>
+    <string name="erase"><![CDATA[<]]></string>
+    <string name="dot">.</string>
 </resources>
