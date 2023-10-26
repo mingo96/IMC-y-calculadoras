@@ -11,4 +11,6 @@
     <color name="del">#C83255</color>
     <color name="op">#3EAA10</color>
     <color name="LLbg">#D5D5D5</color>
+    <color name="gray">#2C2A2A</color>
+    <color name="orange">#FF7400</color>
 </resources>

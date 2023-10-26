@@ -14,7 +14,9 @@
         tools:targetApi="31">
         <activity
             android:name=".calculadoraIMC.CalculadoraIMC"
-            android:exported="false" />
+            android:exported="false"
+
+            android:theme="@style/Theme.AppCompat.Light"    />
         <activity
             android:name=".calculadoraJavi.CalculadoraJavi"
             android:exported="false"
@@ -33,12 +35,13 @@
         <activity
             android:name=".calculadoraEloy.CalculadoraEloy"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.AppCompat.Light"           >
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".calculadoraJosema.CalculadoraJosema"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"            >
         </activity>
     </application>
 
