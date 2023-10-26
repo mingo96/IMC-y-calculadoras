@@ -17,7 +17,9 @@
             android:exported="false" />
         <activity
             android:name=".calculadoraJavi.CalculadoraJavi"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light"
+        />
         <activity
             android:name=".MainActivity"
             android:exported="true"
