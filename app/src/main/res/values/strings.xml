@@ -24,4 +24,5 @@
     <string name="CalculadoraJosema">Calculadora de Josema</string>
     <string name="CalculadoraJavi">Calculadora de Javi</string>
     <string name="calcIMC">calculadora de IMC\n</string>
+    <string name="imgIMC">Logo IMC</string>
 </resources>

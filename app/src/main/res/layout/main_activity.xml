@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,47 +16,75 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button_activityIMC"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="@string/calcIMC"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-
-        <Button
-            android:id="@+id/button_activityEloy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="@string/CalculadoraEloy"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/button_activityIMC" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button_activityJosema"
-            android:layout_width="wrap_content"
+            <Button
+                android:padding="25dp"
+                android:id="@+id/button_activityIMC"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:text="@string/calcIMC"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="ButtonStyle"/>
+
+            <Button
+                android:padding="25dp"
+
+                android:id="@+id/button_activityEloy"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:text="@string/CalculadoraEloy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/button_activityIMC"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="@string/CalculadoraJosema"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/button_activityEloy" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button_activityJavi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/CalculadoraJavi"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button_activityJosema" />
+            <Button
+                android:id="@+id/button_activityJosema"
+                android:padding="25dp"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:text="@string/CalculadoraJosema"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/button_activityEloy"
+                tools:ignore="ButtonStyle" />
 
+            <Button
+                android:id="@+id/button_activityJavi"
+                android:padding="25dp"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:text="@string/CalculadoraJavi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button_activityJosema"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
