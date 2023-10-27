@@ -329,6 +329,10 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                         (calc1.num1).toString() + op + (calc1.num2).toString()
                     )
                 }
+                if(solutionTV.length()>9||numbersTV.length()>9){
+                    solutionTV.textSize = 50f
+                    numbersTV.textSize = 50f
+                }
             }
             //esto reinicia todos los campos que son utilizados al calcular un número
             R.id.button_D -> {

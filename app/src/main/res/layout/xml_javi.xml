@@ -12,6 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/Numbers"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/screen_text"
         android:textColor="@color/solutionText"
         android:textSize="100sp" />
