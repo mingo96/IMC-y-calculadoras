@@ -34,8 +34,8 @@ class Calculo(
     /**
      * Método general que llama a otros para calcular las operaciones
      */
-    fun calcular(op: Int) {
-        when (op) {
+    fun calcular() {
+        when (operacion) {
             0 -> sumar(this.num1, this.num2)
             1 -> restar(this.num1, this.num2)
             2 -> multiplicar(this.num1, this.num2)

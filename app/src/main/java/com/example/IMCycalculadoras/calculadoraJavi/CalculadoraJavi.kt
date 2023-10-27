@@ -312,7 +312,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                         numtemp = ""
                     }
                 }
-                calc1.calcular(calc1.operacion).toString()
+                calc1.calcular().toString()
                 if (calc1.resultado % 1 != 0f) {
                     solutionTV.text = calc1.resultado.toString()
                 } else {
