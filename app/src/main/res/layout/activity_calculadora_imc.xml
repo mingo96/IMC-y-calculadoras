@@ -6,4 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".calculadoraIMC.CalculadoraIMC">
 
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/first_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ToggleButton
+                android:id="@+id/man_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ToggleButton
+                android:id="@+id/woman_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hola"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
