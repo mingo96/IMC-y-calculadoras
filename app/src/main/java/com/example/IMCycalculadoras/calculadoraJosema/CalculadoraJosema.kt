@@ -61,6 +61,7 @@ class CalculadoraJosema: AppCompatActivity()  {
         boton_CE.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 calculo.operacion = ""
+                calculo.resultado = 0.0
                 resultado.text = "0"
             }
         })
