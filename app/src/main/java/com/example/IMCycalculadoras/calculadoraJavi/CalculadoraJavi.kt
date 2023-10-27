@@ -136,6 +136,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 if (op != "" && numtemp != "") {
                     calc1.num2 = numtemp.toFloat()
                     numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 0
                     op = "+"
                     numbersTV.text = getString(
@@ -145,10 +146,10 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 } else if (op != "") {
                     op = "+"
                     calc1.operacion = 0
-                    if (calc1.num1%1==0f){
-                        numbersTV.text = getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
-                    }
-                    else {
+                    if (calc1.num1 % 1 == 0f) {
+                        numbersTV.text =
+                            getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
+                    } else {
                         numbersTV.text = getString(R.string.Numbers, calc1.num1.toString() + op)
                     }
                 } else {
@@ -165,6 +166,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                         numtemp = ""
                     }
                     numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 0
                     op = "+"
                     numbersTV.text = getString(R.string.Numbers, numbersTV.text.toString() + op)
@@ -175,6 +177,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 if (op != "" && numtemp != "") {
                     calc1.num2 = numtemp.toFloat()
                     numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 1
                     op = "-"
                     numbersTV.text = getString(
@@ -184,13 +187,13 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 } else if (op != "") {
                     op = "-"
                     calc1.operacion = 1
-                    if (calc1.num1%1==0f){
-                        numbersTV.text = getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
-                    }
-                    else {
+                    if (calc1.num1 % 1 == 0f) {
+                        numbersTV.text =
+                            getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
+                    } else {
                         numbersTV.text = getString(R.string.Numbers, calc1.num1.toString() + op)
-                    }                }
-                else {
+                    }
+                } else {
                     try {
                         calc1.num1 = numtemp.toFloat()
                     } catch (ex: NumberFormatException) {
@@ -204,6 +207,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                         numtemp = ""
                     }
                     numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 1
                     op = "-"
                     numbersTV.text = getString(R.string.Numbers, numbersTV.text.toString() + op)
@@ -217,6 +221,7 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 if (op != "" && numtemp != "") {
                     calc1.num2 = numtemp.toFloat()
                     numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 2
                     op = "*"
                     numbersTV.text = getString(
@@ -226,47 +231,10 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                 } else if (op != "") {
                     op = "*"
                     calc1.operacion = 2
-                    if (calc1.num1%1==0f){
-                        numbersTV.text = getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
-                    }
-                    else {
-                        numbersTV.text = getString(R.string.Numbers, calc1.num1.toString() + op)
-                    }                } else {
-                    try {
-                        calc1.num1 = numtemp.toFloat()
-                    } catch (ex: NumberFormatException) {
-                        Toast.makeText(
-                            this,
-                            "Por favor, introduzca dos números y una operación",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        calc1.clear()
-                        numtemp = ""
-                    }
-                    numtemp = ""
-                    calc1.operacion = 2
-                    op = "*"
-                    numbersTV.text = getString(R.string.Numbers, numbersTV.text.toString() + op)
-                }
-            }
-
-            R.id.button_div -> {
-                if (op != "" && numtemp != "") {
-                    calc1.num2 = numtemp.toFloat()
-                    numtemp = ""
-                    calc1.operacion = 3
-                    op = "/"
-                    numbersTV.text = getString(
-                        R.string.Numbers,
-                        calc1.num1.toString() + op + calc1.num2.toString()
-                    )
-                } else if (op != "") {
-                    op = "/"
-                    calc1.operacion = 3
-                    if (calc1.num1%1==0f){
-                        numbersTV.text = getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
-                    }
-                    else {
+                    if (calc1.num1 % 1 == 0f) {
+                        numbersTV.text =
+                            getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
+                    } else {
                         numbersTV.text = getString(R.string.Numbers, calc1.num1.toString() + op)
                     }
                 } else {
@@ -282,6 +250,47 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
                         numtemp = ""
                     }
                     numtemp = ""
+                    calc1.enDecimal = false
+                    calc1.operacion = 2
+                    op = "*"
+                    numbersTV.text = getString(R.string.Numbers, numbersTV.text.toString() + op)
+                }
+            }
+
+            R.id.button_div -> {
+                if (op != "" && numtemp != "") {
+                    calc1.num2 = numtemp.toFloat()
+                    numtemp = ""
+                    calc1.enDecimal = false
+                    calc1.operacion = 3
+                    op = "/"
+                    numbersTV.text = getString(
+                        R.string.Numbers,
+                        calc1.num1.toString() + op + calc1.num2.toString()
+                    )
+                } else if (op != "") {
+                    op = "/"
+                    calc1.operacion = 3
+                    if (calc1.num1 % 1 == 0f) {
+                        numbersTV.text =
+                            getString(R.string.Numbers, (calc1.num1.toInt()).toString() + op)
+                    } else {
+                        numbersTV.text = getString(R.string.Numbers, calc1.num1.toString() + op)
+                    }
+                } else {
+                    try {
+                        calc1.num1 = numtemp.toFloat()
+                    } catch (ex: NumberFormatException) {
+                        Toast.makeText(
+                            this,
+                            "Por favor, introduzca dos números y una operación",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        calc1.clear()
+                        numtemp = ""
+                    }
+                    numtemp = ""
+                    calc1.enDecimal = false
                     calc1.operacion = 3
                     op = "/"
                     numbersTV.text = getString(R.string.Numbers, numbersTV.text.toString() + op)
@@ -331,11 +340,14 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.button_puntodec -> {
-                if (numtemp == "") {
-                    numtemp += 0
+                if (calc1.enDecimal == false) {
+                    if (numtemp == "") {
+                        numtemp += 0
+                    }
+                    numtemp += "."
+                    numbersTV.text = numtemp
+                    calc1.enDecimal = true
                 }
-                numtemp += "."
-                numbersTV.text = numtemp
             }
 
             R.id.button_borra1 -> {

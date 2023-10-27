@@ -27,6 +27,11 @@ class Calculo(
     var resultado: Float = 0.0f
 
     /**
+     * Verifica que si ya estamos editando la parte decimal de un número o no
+     */
+    var enDecimal = false
+
+    /**
      * Método general que llama a otros para calcular las operaciones
      */
     fun calcular(op: Int) {
@@ -71,5 +76,6 @@ class Calculo(
         num2 = 0f
         operacion = 0
         resultado = 0f
+        enDecimal = false
     }
 }
