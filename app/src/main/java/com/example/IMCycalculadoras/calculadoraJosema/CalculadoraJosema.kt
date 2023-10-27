@@ -70,7 +70,7 @@ class CalculadoraJosema: AppCompatActivity()  {
         }
 
         boton_punto.setOnClickListener {
-            if (!comprobarSignos(calculo.operacion)){
+            if (!comprobarPuntos(calculo.operacion)){
                 calculo.operacion += "."
                 resultado.text = calculo.operacion
             }
