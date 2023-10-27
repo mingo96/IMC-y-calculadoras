@@ -58,140 +58,106 @@ class CalculadoraJosema: AppCompatActivity()  {
         boton9 = findViewById(R.id.boton_9)
         boton0 = findViewById(R.id.boton_0)
 
-        boton_CE.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion = ""
-                calculo.resultado = 0.0
-                resultado.text = "0"
-            }
-        })
+        boton_CE.setOnClickListener {
+            calculo.operacion = ""
+            calculo.resultado = 0.0
+            resultado.text = "0"
+        }
 
-        boton_atras.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion = calculo.operacion.dropLast(1)
-                resultado.text = calculo.operacion
-            }
-        })
+        boton_atras.setOnClickListener {
+            calculo.operacion = calculo.operacion.dropLast(1)
+            resultado.text = calculo.operacion
+        }
 
-        boton_punto.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
+        boton_punto.setOnClickListener {
+            if (!comprobarSignos(calculo.operacion)){
                 calculo.operacion += "."
                 resultado.text = calculo.operacion
             }
-        })
+        }
 
-        boton_igual.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                resultado.text = calculo.Calcular().toString()
-                calculo.operacion = ""
-            }
-        })
+        boton_igual.setOnClickListener {
+            resultado.text = calculo.Calcular().toString()
+            calculo.operacion = ""
+        }
 
-        boton1.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 1
+        boton1.setOnClickListener {
+            calculo.operacion += 1
+            resultado.text = calculo.operacion
+        }
+
+        boton2.setOnClickListener {
+            calculo.operacion += 2
+            resultado.text = calculo.operacion
+        }
+
+        boton3.setOnClickListener {
+            calculo.operacion += 3
+            resultado.text = calculo.operacion
+        }
+
+        boton4.setOnClickListener {
+            calculo.operacion += 4
+            resultado.text = calculo.operacion
+        }
+
+        boton5.setOnClickListener {
+            calculo.operacion += 5
+            resultado.text = calculo.operacion
+        }
+
+        boton6.setOnClickListener {
+            calculo.operacion += 6
+            resultado.text = calculo.operacion
+        }
+
+        boton7.setOnClickListener {
+            calculo.operacion += 7
+            resultado.text = calculo.operacion
+        }
+
+        boton8.setOnClickListener {
+            calculo.operacion += 8
+            resultado.text = calculo.operacion
+        }
+
+        boton9.setOnClickListener {
+            calculo.operacion += 9
+            resultado.text = calculo.operacion
+        }
+
+        boton0.setOnClickListener {
+            calculo.operacion += 0
+            resultado.text = calculo.operacion
+        }
+
+        boton_mas.setOnClickListener {
+            if (!comprobarSignos(calculo.operacion)) {
+                calculo.operacion += "+"
                 resultado.text = calculo.operacion
             }
-        })
+        }
 
-        boton2.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 2
+        boton_menos.setOnClickListener {
+            if (!comprobarSignos(calculo.operacion)) {
+                calculo.operacion += "-"
                 resultado.text = calculo.operacion
             }
-        })
+        }
 
-        boton3.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 3
+        boton_multiplicar.setOnClickListener {
+            if (!comprobarSignos(calculo.operacion)) {
+                calculo.operacion += "x"
                 resultado.text = calculo.operacion
             }
-        })
+        }
 
-        boton4.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 4
+        boton_dividir.setOnClickListener {
+            if (!comprobarSignos(calculo.operacion)) {
+                calculo.operacion += "/"
                 resultado.text = calculo.operacion
             }
-        })
-
-        boton5.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 5
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton6.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 6
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton7.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 7
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton8.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 8
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton9.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 9
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton0.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                calculo.operacion += 0
-                resultado.text = calculo.operacion
-            }
-        })
-
-        boton_mas.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                if (!comprobarSignos(calculo.operacion)) {
-                    calculo.operacion += "+"
-                    resultado.text = calculo.operacion
-                }
-            }
-        })
-
-        boton_menos.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                if (!comprobarSignos(calculo.operacion)) {
-                    calculo.operacion += "-"
-                    resultado.text = calculo.operacion
-                }
-            }
-        })
-
-        boton_multiplicar.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                if (!comprobarSignos(calculo.operacion)) {
-                    calculo.operacion += "x"
-                    resultado.text = calculo.operacion
-                }
-            }
-        })
-
-        boton_dividir.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                if (!comprobarSignos(calculo.operacion)) {
-                    calculo.operacion += "/"
-                    resultado.text = calculo.operacion
-                }
-            }
-        })
+        }
 
     }
 }
@@ -199,6 +165,15 @@ class CalculadoraJosema: AppCompatActivity()  {
 fun comprobarSignos(cadena: String): Boolean{
     for (caracter in cadena){
         if (caracter.toString() in arrayOf("+", "-", "/", "x")){
+            return true
+        }
+    }
+    return cadena.isEmpty()
+}
+
+fun comprobarPuntos(cadena: String): Boolean{
+    for (caracter in cadena){
+        if (caracter.toString() in arrayOf(".")){
             return true
         }
     }
